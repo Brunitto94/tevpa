@@ -1,0 +1,115 @@
+\section{Supernova explosion}
+
+\begin{frame}{3D RHD simulations (Longo et al. subm.)}
+	\begin{columns}
+
+		{\footnotesize
+		\begin{column}{0.5\textwidth}
+		\includegraphics[width=\textwidth]{images/3d_shot_rho.png}
+				\vspace{-.5cm}
+		 \begin{itemize}
+		  \item We start $\approx 10^{3}\,{\rm yr}$ post explosion,
+		 				located far from the jet walls
+		  \item $R_{\rm j} >> R_{\rm SN}\quad \Rightarrow R_{\rm SN}\approx 10^{-2} R_{\rm j}$ \\
+		  \item  Uniform ejecta $\rho_{\rm SN},p_{\rm SN}>>\rho_{\rm j},p_{\rm j}$
+		  \item Jet and ejecta: ionized gas of protons and electrons
+		 \end{itemize}
+
+		\end{column}}
+		\begin{column}{0.7\textwidth}
+			{\scriptsize
+		 \begin{columns}\begin{column}{.5\textwidth}
+		  \begin{alertblock}{Jet properties}
+			\begin{itemize}
+		      \item $R_{\rm j} = 100\,{\rm pc}$
+			  \item $L_{\rm j} = 10^{44}\,{\rm erg}\,{\rm s}^{-1}$
+			  \item $\Gamma_{\rm j}=2$
+			  \item $h_{\rm j} = 1.1c^{2}$
+			  \item $\rho_{\rm j} = 6\cdot10^{-30}\,{\rm g}/{\rm cm}^{3}$
+			  \item $T_{\rm j} = 2\times 10^{11} K$
+			\end{itemize}
+		   \end{alertblock}
+		  \end{column}
+		  \hspace{-2cm}
+		  \begin{column}{.5\textwidth}
+		   \begin{exampleblock}{SN properties}
+		     \begin{itemize}
+					\item $M_{\rm SN}=2\,M_\odot$
+					\item $E_{\rm SN}=10^{51}\,{\rm erg}$
+					\item $R_{\rm SN}=1.1\,{\rm pc}$
+					\item $\rho_{\rm SN}= 2.4\cdot10^{-23}\,{\rm g}/{\rm cm}^{3}$
+					\item $T_{\rm SN} = 10^{9}\,K$
+					\item $v_{\rm orb} = 200\,{\rm km}\,{\rm s}^{-1}$
+				\end{itemize}
+			\end{exampleblock}
+		 \end{column}
+		\end{columns}}
+		\vspace{1cm}
+		{\scriptsize
+		\begin{block}{Code: \texttt{Ratpenat} (Perucho 2010)}
+			OpenMPI+OpenMP HRSC 3D RHD code, Marquina 1998 fluxes, PPM recon, Synge equation
+			\\
+				Conservative form equations $\frac{\partial U}{\partial t}+\frac{F^{i}}{\partial x^{i}}=0$\\
+				Where $U=(D,S^{j},\tau)^{T}$ and $F = (Dv^{i}, S^{j}v^{i}+p\delta^{ij}, S^{i}-Dv^{i}) $
+		\end{block}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+\begin{frame}{2D cuts through the 3D physical domain}
+\begin{columns}
+	\begin{column}{.9\textwidth}
+	\includegraphics[width=0.3612\linewidth]{images/2d_tem_trac_450.pdf}
+	\includegraphics[width=0.3675\linewidth]{images/2d_tem_trac_650.pdf} \\
+	\includegraphics[width=0.36015\linewidth]{images/2d_tem_trac_850.pdf}
+	\includegraphics[width=0.36855\linewidth]{images/2d_tem_trac_1300.pdf}
+	\end{column}
+	\hspace{-3cm}
+	\begin{column}{.4\textwidth}
+			\begin{block}{Dynamical evolution}
+	\begin{itemize}
+		\item Free expansion phase
+		\item Shock wave and disruption
+		\item Important mixing
+		\item Ejecta swept away
+	\end{itemize}
+	\end{block}
+	\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Following the time evolution of the interaction}
+		
+		{\scriptsize Normalized quantities: summing across the outflow boundary and divided by the jet values}
+	\begin{columns}
+	 \begin{column}{0.5\textwidth}
+      \includegraphics[width=\linewidth]{images/evolution_integrated_xz_u_uk_2_riot.pdf}
+     \end{column}
+	 \begin{column}{0.5\textwidth}
+		{\footnotesize
+		\begin{block}{Kinetic and internal energy densities}
+			\begin{itemize}
+				\item Global drop for both energies
+				\item $u \nearrow$ whith the swept heated ejecta 
+				\item $e_k \nearrow$ with the heavy matter incorporated
+			\end{itemize}
+		\end{block}}
+	\end{column}
+	\end{columns}
+	\begin{columns}
+
+	   \begin{column}{.5\textwidth}
+
+      \includegraphics[width=\linewidth]{images/evolution_integrated_xz_d_vy_2_riot.pdf}
+	   \end{column}
+	   \begin{column}{.5\textwidth}
+		{\footnotesize
+		\begin{block}{Lab frame density and axial velocity}
+			\begin{itemize}
+				\item $D \nearrow$ with the entrainment of the ejecta
+				\item $v_y \searrow$ with the disruption then $\nearrow$ with the reacceleration
+			\end{itemize}
+		\end{block}}
+	   \end{column}
+	\end{columns}
+\end{frame}

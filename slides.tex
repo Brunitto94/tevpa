@@ -1,0 +1,51 @@
+\documentclass[unknownkeysallowed,table]{beamer}
+\usepackage{multimedia}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{fourier}
+\usefonttheme{professionalfonts}
+\usepackage{wasysym}
+\usepackage{attrib}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage{mathtools}
+\setbeamersize{text margin left=8mm,text margin right=12mm} 
+\usepackage{tikz}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamercolor{normal text}{fg=black!90}
+\usepackage{textcomp}
+\usepackage[scaled]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+\usepackage{fancybox}
+\newcommand{\bfnabla}{\Vec{\nabla}}
+\newcommand{\bfsimb}[1]{\Vec{#1}}
+\newcommand{\no}{\nonumber}
+\AtBeginSection[]{
+  \begin{frame}<beamer>{Table of contents}
+    \tableofcontents[currentsection,
+    ]
+ \end{frame}
+}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\usetheme{Singapore}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\title[]{{\small Extragalactic jets at all scale: a Cretan view}\vspace{.5cm} \\
+\bf{Relativistic hydrodynamic simulations of supernova explosions within extragalactic jets}}
+\author[]{\huge \bf{ Bruno Longo} \\
+{\scriptsize M. Perucho, V. Bosch-Ramon, J.M. Mart\'i, G. Fichet de Clairfontaine}}
+
+\institute[]{Departament d'Astronomia i Astrof\'isica, Universitat de València }
+\titlegraphic{\includegraphics[width=1cm]{images/uv.png}\hspace{2cm}\includegraphics[width=4cm]{images/ministero.png}}
+
+\begin{document}
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+\input{intro.tex}
+\input{res.tex}
+\input{conclu.tex}
+\end{document}
