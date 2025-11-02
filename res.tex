@@ -46,8 +46,9 @@
 		\end{columns}}
 		\vspace{1cm}
 		{\scriptsize
-		\begin{block}{Code: \texttt{Ratpenat} (Perucho 2010)}
-			OpenMPI+OpenMP HRSC 3D RHD code, Marquina 1998 fluxes, PPM recon, Synge equation
+		\begin{block}{Code: \texttt{Ratpenat} (Perucho et al. 2010)}
+			OpenMPI+OpenMP HRSC 3D RHD code, Marquina 1998 fluxes, PPM recon, Synge EoS,
+				TVD-preserving RK
 			\\
 				Conservative form equations $\frac{\partial U}{\partial t}+\frac{F^{i}}{\partial x^{i}}=0$\\
 				Where $U=(D,S^{j},\tau)^{T}$ and $F = (Dv^{i}, S^{j}v^{i}+p\delta^{ij}, S^{i}-Dv^{i}) $
@@ -99,17 +100,17 @@
 				    \item Target photons:\\
 						$\rightarrow$ Anisotropic CMB + IR galactic background
 					\item Approximate formula for the Thompson+Klein-Nishina regime
-						(Khangulyan 2014, Bosch-Ramon 2018)
+							(Khangulyan 2014, Bosch-Ramon\&Khangulyan 2018)
 				\end{itemize}
 			\end{block}
 		\end{column}
 		\begin{column}{.5\textwidth}
 			\includegraphics[width=\linewidth]{images/eled_hr.pdf}
-			\begin{exampleblock}{Emitted luminosity}
+			\begin{exampleblock}{Emitted luminosity with $\eta=0.1$}
 				\begin{itemize}
 					\item With the given e$^{-}$ distribution, we reach the PeV in IC
 					\item The Synchrotron emission reaches $10^{41}\,{\rm erg}\,{\rm s}^{-1}$
-							and the IC $10^{39}\,{\rm erg}\,{\rm s}^{-1}$
+							and the IC reaches $10^{39}\,{\rm erg}\,{\rm s}^{-1}$
 				\end{itemize}
 			\end{exampleblock}
 			\centering
@@ -163,16 +164,17 @@
 
 \begin{frame}{SEDs with $\phi=20,60^{\circ}$}
 	\begin{columns}
-		\begin{column}{.6\textwidth}
+		\begin{column}{.7\textwidth}
+				\centering
 			\includegraphics[width=\textwidth]{images/sed_hr.pdf}
 		\end{column}
 		\begin{column}{.4\textwidth}
 			{\scriptsize
 			\begin{itemize}
-				\item Ratio $\eta_{\rm B}=p_{\rm B}/p_{\rm g}=10^{-2}$
+				\item $\eta=0.1\quad\eta_{\rm B}=p_{\rm B}/p_{\rm g}=10^{-2}$
 				\item Source at $z=0.003\;(13{\rm Mpc})$ (type CenA)
-				\item Fluxes for Synchrotron and IC emission
-				\item Possible detecion of Sync by Chandra and IC by CTAO
+				\item Fluxes for synchrotron and IC emission
+				\item Possible detection of synchrotron by Chandra and IC by CTAO
 			\end{itemize}
 			}
 		\end{column}
@@ -183,7 +185,7 @@
 	\begin{columns}
 		\begin{column}{.5\textwidth}
 		\centering
-		{\scriptsize Xrays $(10^{18}\,{\rm GHz})$}
+		{\scriptsize X-rays $(10^{18}\,{\rm GHz})$}
 			\includegraphics[width=.95\textwidth]{images/Chandra_Sync.png}
 		\end{column}
 		\begin{column}{.5\textwidth}
@@ -196,7 +198,7 @@
 			\begin{itemize}
 				\item Internal to non-thermal energy ratio $\eta=0.1,0.01$
 				\item IC close to be detectable in $\gamma$-rays
-				\item Chandra is sensible enough to observe the Synchrotron emissions for the whole duration of the interaction
+				\item Chandra is sensitive enough to detect the synchrotron emission for the whole duration of the interaction
 			\end{itemize}
 		}
 \end{frame}
